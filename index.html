@@ -8,21 +8,21 @@
 </head>
 <body>
   <form method="post" id="js-cc-form">
-    <br>Name: <br>
-    <input type="text" name="fullName" autocomplete="name" required>
-   <br>City: <br>
-    <input type="text" name="city" list="cities" autocomplete="address-level2" required>
+    <label for="fullName"> Name: </label><br>
+    <input type="text" id="fullName" name="fullNameText" autocomplete="name" required>
+   <br><label for="city">City:</label> <br>
+    <input type="text" id="city" name="cityText" list="cities" autocomplete="address-level2" required>
       <datalist id="cities">
         <option>Manchester</option>
         <option>London</option>
         <option>Newcastle</option>
       </datalist>
-    <br>Credit Card Number: <br>
-    <input type="text" name="creditCardNumber" pattern="\d{16}" title="the credit card number must be 16 digits" autocomplete="cc-number" required>
-    <br>Expiry Date: <br>
-    <input type="text" name="expiryDate" pattern="\d{2}/\d{2}" autocomplete="cc-exp" required>
-    <br>Security Code: <br>
-    <input type="password" name="securityCode" autocomplete="cc-csc" pattern="\d{3}" required>
+    <br><label for="ccNumber">Credit Card Number:</label> <br>
+    <input type="text" id="ccNumber" name="creditCardNumber" pattern="\d{16}" title="the credit card number must be 16 digits" autocomplete="cc-number" required>
+    <br><label for="exipryDate">Expiry Date:</label> <br>
+    <input type="text" id="expiryDate" name="expiryDateText" pattern="\d{2}/\d{2}" autocomplete="cc-exp" required>
+    <br><label for="securityCode">Security Code:</label> <br>
+    <input type="password" id="securityCode" name="securityCodeText" autocomplete="cc-csc" pattern="\d{3}" required>
     <br> 
     <input type="submit" value="submit">
   </form>
