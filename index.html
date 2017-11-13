@@ -7,24 +7,25 @@
   <title>Document</title>
 </head>
 <body>
-  <form method="post" id="cc-form">
+  <form method="post" id="js-cc-form">
     <br>Name: <br>
     <input type="text" name="fullName" autocomplete="name" required>
    <br>City: <br>
-    <input type="text" name="City" list="cities" requires>
+    <input type="text" name="city" list="cities" autocomplete="address-level2" required>
       <datalist id="cities">
         <option>Manchester</option>
         <option>London</option>
         <option>Newcastle</option>
       </datalist>
     <br>Credit Card Number: <br>
-    <input type="number" name="creditCardNumber" pattern="\d{16}" autocomplete="cc-number" required>
+    <input type="text" name="creditCardNumber" pattern="\d{16}" title="the credit card number must be 16 digits" autocomplete="cc-number" required>
     <br>Expiry Date: <br>
-    <input type="month" name="expiryDate" autocomplete="cc-exp" required>
+    <input type="text" name="expiryDate" pattern="\d{2}/\d{2}" autocomplete="cc-exp" required>
     <br>Security Code: <br>
-    <input type="number" name="securityCode" autocomplete="cc-csc" required>
+    <input type="password" name="securityCode" autocomplete="cc-csc" pattern="\d{3}" required>
     <br> 
     <input type="submit" value="submit">
   </form>
+  <script type="text/javascript" src="CreditCardForm.js"></script>
 </body>
 </html>
