@@ -12,11 +12,11 @@
     
     <div class="form-group">
       <label for="fullName"> Name: </label>
-      <input type="text" id="fullName" name="fullNameText" autocomplete="name" required>
+      <input type="text" id="fullName" name="fullNameText" autocomplete="name" class="long"required>
     </div> 
     <div class="form-group">
     <label for="city">City:</label>
-    <input type="text" id="city" name="cityText" list="cities" autocomplete="address-level2" required>
+    <input type="text" id="city" name="cityText" list="cities" autocomplete="address-level2" class="long" required>
       <datalist id="cities">
         <option>Manchester</option>
         <option>London</option>
@@ -25,15 +25,15 @@
     </div>
     <div class="form-group">
       <label for="ccNumber">Credit Card Number:</label>
-      <input type="text" id="ccNumber" name="creditCardNumber" pattern="\d{16}" title="the credit card number must be 16 digits" autocomplete="cc-number" required>
+      <input type="text" id="ccNumber" name="creditCardNumber" pattern="\d{16}" title="the credit card number must be 16 digits" autocomplete="cc-number" class="long" required>
     </div>
     <div class="form-group">
       <label for="exipryDate">Expiry Date:</label>
-      <input type="text" id="expiryDate" name="expiryDateText" pattern="\d{2}/\d{2}" autocomplete="cc-exp" required>
+      <input type="text" id="expiryDate" name="expiryDateText" pattern="\d{2}/\d{2}" autocomplete="cc-exp" class="short" required>
     </div>
     <div class="form-group">
       <label for="securityCode">Security Code:</label>
-      <input type="password" id="securityCode" name="securityCodeText" autocomplete="cc-csc" pattern="\d{3}" required>
+      <input type="password" id="securityCode" name="securityCodeText" autocomplete="cc-csc" pattern="\d{3}" class="short" required>
     </div>
     <button type="submit" value="submit">Pay</button>
   </form>
